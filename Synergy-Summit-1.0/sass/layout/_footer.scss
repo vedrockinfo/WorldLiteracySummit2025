@@ -1,0 +1,85 @@
+footer{
+    background: $colorBlack;
+    padding: 4rem 0;
+    position: relative;
+    .row{
+        @include respond (maxWidth768){
+            row-gap: 1.5rem;
+        }
+    }
+    &::before{
+        content: "";
+        background-image: url(../images/footer-09.png);
+        mix-blend-mode: overlay;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        opacity: 0.09;
+    }
+    .container{
+        position: relative;
+        .footer-widgets{
+            p{
+                text-align: center;
+                i{
+                    display: block;
+                    font-size: 3rem;
+                    margin-bottom: 1rem;
+                }
+                margin-bottom: 0;
+                color: $colorWhite;
+                a{
+                    color: $colorWhite;
+                    // font-size: 2rem;
+                    transition: $transition;
+                    &:hover{
+                        color: rgba($colorWhite, $alpha: 0.7);
+                    }
+                }
+            }
+        }
+    }
+}
+.copyright{
+    background: $colorBlack;
+    border-top: 1px solid rgba($colorWhite, $alpha: 0.25);
+    p{
+        margin-bottom: 0;
+        padding: 15px;
+        font-size: 13px;
+        font-weight: 400;
+    }
+    ul{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 1rem;
+        margin: 0;
+        padding: 0;
+        li{
+            a{
+                color: rgba($colorWhite, $alpha: 1);
+                border: 1px solid rgba($colorWhite, $alpha: 1);
+                width: 3.5rem;
+                height: 3.5rem;
+                display: grid;
+                border-radius: 100%;
+                place-content: center;
+                transition: all 0.5s;
+                &:hover{
+                    background: rgba($colorWhite, $alpha: 1);
+                    i{
+                        color: $colorBlack;
+                    }
+                }
+                i{
+                    font-family: 14px;
+                }
+            }
+        }
+    }
+}
